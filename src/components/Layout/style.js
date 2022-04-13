@@ -9,4 +9,5 @@ export const SMain = styled.div`
 width:100% ;
 background:#DADADA ;
 
+
 `
