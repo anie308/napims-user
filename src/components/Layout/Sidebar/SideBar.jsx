@@ -27,9 +27,36 @@ function SideBar() {
       </Logo>
       <Con>
         <Title>MAINMENU</Title>
-       
         {
           mainLinkArr.map(({icon, label, notification, to })=> (
+            <LinkCon key={label}>
+            <SLink to={to}>
+              <LinkIcon>{icon}</LinkIcon>
+              <LinkLabel>{label}</LinkLabel>
+              {!! notification && <LinkNotification>{notification}</LinkNotification>}
+            </SLink>
+          </LinkCon>
+          ))
+        }
+      </Con>
+      <Con>
+        <Title>MAINMENU</Title>
+        {
+          workLinkArr.map(({icon, label, notification, to })=> (
+            <LinkCon key={label}>
+            <SLink to={to}>
+              <LinkIcon>{icon}</LinkIcon>
+              <LinkLabel>{label}</LinkLabel>
+              {!! notification && <LinkNotification>{notification}</LinkNotification>}
+            </SLink>
+          </LinkCon>
+          ))
+        }
+      </Con>
+      <Con>
+        <Title>MAINMENU</Title>
+        {
+          generalLinkArr.map(({icon, label, notification, to })=> (
             <LinkCon key={label}>
             <SLink to={to}>
               <LinkIcon>{icon}</LinkIcon>

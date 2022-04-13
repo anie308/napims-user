@@ -5,14 +5,15 @@ export const Container = styled.div`
 width:200px ;
 background: #081A51;
 height:100vh ;
-padding: 0  20px  ;
+padding: 0  0 0 15px  ;
 position:relative ;
 `
 export const Logo = styled(Link)`
 display: flex;
 cursor: pointer;
 align-items:center ;
-/* padding:0 20px ; */
+margin:0 ;
+padding: 0;
 text-decoration:none ;
 .icon{
     background:#017EFA ;
@@ -46,17 +47,17 @@ color: #51CBFF;
 
 `
 export const Con = styled.div`
-margin-top:20px ;
+margin-top:5px ;
 
 `
 
 export const LinkCon = styled.div`
 background:transparent ;
-border-radius: 5px;
-margin:20px 0 ;
-padding:8px  ;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+margin:5px 0 ;
+padding: 8px ;
 &:hover{
-/* background: inset 0 0 0 1px #1B2B65 ; */
 background:#1B2B65  ;
 }
 `
