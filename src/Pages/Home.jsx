@@ -3,7 +3,9 @@ import { Container } from '../styles/Home.style'
 
 function Home() {
   return (
-    <Container>Home</Container>
+    <Container>
+   
+    </Container>
   )
 }
 

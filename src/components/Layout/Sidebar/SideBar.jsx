@@ -24,89 +24,76 @@ import {
 } from "react-icons/bs";
 import { MdAnalytics } from "react-icons/md";
 import { FaUsers, FaImages } from "react-icons/fa";
-import { RiFolder4Line, RiSettingsLine } from "react-icons/ri";
+import { RiFolder4Line } from "react-icons/ri";
 
 function SideBar() {
-  const [sideBarOpen, setSideBarOpen] = useState(false);
   const [isDropped, setIsDropped] = useState(false);
   const { pathname } = useLocation();
   return (
-    <Container isOpen={sideBarOpen}>
-      <SideBarButton
-        isOpen={sideBarOpen}
-        onClick={() => setSideBarOpen((p) => !p)}
-      >
-        <AiOutlineLeft className="icon" />
-      </SideBarButton>
+    <Container >
+      
+  
 
-      <Logo to="/" style={!sideBarOpen ? { width: `fit-content` } : {}}>
+      <Logo to="/" 
+      >
         <p className="icon">
           <AiOutlinePlusCircle className="iconn" />
         </p>
 
-        {sideBarOpen && (
-          <>
             <p>chams</p>
-          </>
-        )}
+
       </Logo>
       <Con>
-        {sideBarOpen && (
-          <>
+
             <Title>MainMenu</Title>
-          </>
-        )}
+
         {mainLinkArr.map(({ icon, label, notification, to }) => (
           <LinkCon key={label} isActive={pathname === to}>
-            <SLink to={to} style={!sideBarOpen ? { width: `fit-content` } : {}}>
+            <SLink to={to} 
+
+            >
               <LinkIcon>{icon}</LinkIcon>
-              {sideBarOpen && (
-                <>
+            
                   <LinkLabel>{label}</LinkLabel>
+
                   {!!notification && (
                     <LinkNotification>{notification}</LinkNotification>
                   )}
-                </>
-              )}
+              
             </SLink>
           </LinkCon>
         ))}
       </Con>
       <Con>
-        {sideBarOpen && (
-          <>
+      
+      
             <Title>Workspace</Title>
-          </>
-        )}
+          
         {workLinkArr.map(({ icon, label, notification, to }) => (
           <LinkCon key={label}>
-            <SLink to={to} style={!sideBarOpen ? { width: `fit-content` } : {}}>
+            <SLink to={to}
+             >
               <LinkIcon>{icon}</LinkIcon>
-              {sideBarOpen && (
-                <>
+          
                   <LinkLabel>{label}</LinkLabel>
                   {!!notification && (
                     <LinkNotification>{notification}</LinkNotification>
                   )}
-                </>
-              )}
+           
             </SLink>
           </LinkCon>
         ))}
       </Con>
       <Con>
-        {sideBarOpen && (
-          <>
+    
             <Title>General</Title>
-          </>
-        )}
+     
 
         <Drop>
-          <DropButton   style={!sideBarOpen ? { width: `fit-content` } : {}}    onClick={e =>setIsDropped(!isDropped) }><RiFolder4Line className="iconnn"/>  {sideBarOpen && (
-                <>
+          <DropButton  
+             onClick={e =>setIsDropped(!isDropped) }><RiFolder4Line className="iconnn"/> 
                   <p>Files and Folders</p>
-                </>
-              )}
+
           </DropButton>
          {isDropped && (
             <DropContent>
@@ -114,17 +101,14 @@ function SideBar() {
               <LinkCon key={label}>
                 <SLink
                   to={to}
-                  style={!sideBarOpen ? { width: `fit-content` } : {}}
                 >
                   <LinkIcon>{icon}</LinkIcon>
-                  {sideBarOpen && (
-                    <>
+                  
                       <LinkLabel>{label}</LinkLabel>
                       {!!notification && (
                         <LinkNotification>{notification}</LinkNotification>
                       )}
-                    </>
-                  )}
+            
                 </SLink>
               </LinkCon>
             ))}

@@ -8,13 +8,13 @@ import {
   FileUploadCon,
   Folder,
   UploadArea
-} from "../styles/Content.style";
+} from "../styles/Media.style";
 
 function Media() {
   return (
     <Container>
       <UploadMCon>
-        <UploadText></UploadText>
+        <UploadText> </UploadText>
         <UploadCard />
         <UploadCard />
       </UploadMCon>

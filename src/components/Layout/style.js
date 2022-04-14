@@ -3,22 +3,24 @@ import styled from "styled-components";
 
 
 export const SLayout = styled.div` 
-display:flex ;
-
-
-`
-export const SCon = styled.div`  
-height:100vh ;
-background-color:#F0EFEF ;
-width:100% ;
-
-
-`
-export const SMain = styled.div`  
-    width:100% ;
-    height:100% ;
 position: relative;
-background:#DADADA ;
+display:flex ;
+width: 100%;
+
+`
+export const Ccon = styled.div`  
+position:fixed ;
+top:0 ;
+left: 0;
+`
+export const SCon = styled.div` 
+position: relative;
+left: 200px;
+width: calc(100% - 200px)
+`
+export const SMain = styled.div` 
+    height:100% ; 
+ background:#DADADA ;
 
 
 `

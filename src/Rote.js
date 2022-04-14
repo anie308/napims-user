@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route} from 'react-router-dom'
-import Media from './Pages/Content'
+import Media from './Pages/Media'
 import Home from './Pages/Home'
 import Inbox from './Pages/Inbox'
 import NotFound from './Pages/NotFound'

@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  position: sticky;
-  top: 0;
-  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 10px;
   background:#FFFFFF ;
+  width:100% ;
 `;
 export const UserCon = styled.div`
   padding: 0 20px;
