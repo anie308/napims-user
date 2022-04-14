@@ -16,6 +16,7 @@ import { AiOutlinePlusCircle, AiOutlineLeft } from "react-icons/ai";
 import { BiBarChartSquare, BiUserCircle, BiSearchAlt } from "react-icons/bi";
 import { BsChatText, BsCalendar2Event } from "react-icons/bs";
 import { MdAnalytics } from "react-icons/md";
+import { FaUsers } from "react-icons/fa";
 import { RiFolder4Line, RiSettingsLine } from "react-icons/ri";
 
 function SideBar() {
@@ -25,7 +26,7 @@ function SideBar() {
     <Container isOpen={sideBarOpen}>
      
       <SideBarButton isOpen={sideBarOpen} onClick={() => setSideBarOpen((p) => !p)}>
-        <AiOutlineLeft/>
+        <AiOutlineLeft className="icon"/>
       </SideBarButton>
       
       <Logo to="/" style={!sideBarOpen ? {width:`fit-content`} : {}}>
@@ -128,27 +129,27 @@ const mainLinkArr = [
 ];
 const workLinkArr = [
   {
-    label: "Account",
+    label: "Profile",
     icon: <BiUserCircle />,
     to: "/account",
     notification: 0,
   },
   {
-    label: "Scheduled Posts",
+    label: "Pending Authorization",
     icon: <BsCalendar2Event />,
-    to: "/scheduled",
+    to: "/pending",
     notification: 0,
   },
   {
-    label: "Communities",
-    icon: <BiSearchAlt />,
-    to: "/communities",
+    label: "Users",
+    icon: <FaUsers />,
+    to: "/users",
     notification: 0,
   },
   {
-    label: "Analytics ",
+    label: "Work Log ",
     icon: <MdAnalytics />,
-    to: "/analytics",
+    to: "/log",
     notification: 0,
   },
 ];

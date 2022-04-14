@@ -13,16 +13,22 @@ display:flex ;
 justify-content:center ;
 align-items:center ;
 z-index:2 ;
-
+border: 1px solid rgba(8, 26, 81, 0.48);
 transform: ${({isOpen}) => !isOpen ?  `rotate(180deg)` : `initial`} ;
+
+.icon{
+    color:#445BFF ;
+    
+}
 `
 
 export const Container = styled.div`
-width: ${({isOpen}) => (!isOpen?  `auto` : `200px` )};
+width: ${({isOpen}) => (!isOpen?  `auto` : `240px` )};
 background: #081A51;
 height:100vh ;
 padding: ${({isOpen}) => !isOpen ?  `0 15px` : `0  0 0 15px`}  ;
 position:relative ;
+transition: all ease 0.2s;
 `
 export const Logo = styled(Link)`
 display: flex;

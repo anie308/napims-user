@@ -1,12 +1,17 @@
 import React from 'react'
+import Mainnav from './MainNav/Mainnav'
 import SideBar from './Sidebar/SideBar'
-import { SLayout, SMain } from './style'
+import { SCon, SLayout, SMain } from './style'
 
 function Layout({children}) {
   return (
     <SLayout>
         <SideBar/>
-        <SMain>{children}</SMain>
+        <SCon>
+          <Mainnav/>
+          <SMain>{children}</SMain>
+        </SCon>
+        
     </SLayout>
   )
 }
