@@ -11,11 +11,10 @@ import {
   LinkLabel,
   LinkNotification,
   Logo,
-  SideBarButton,
   SLink,
   Title,
 } from "./style";
-import { AiOutlinePlusCircle, AiOutlineLeft } from "react-icons/ai";
+import { AiOutlinePlusCircle} from "react-icons/ai";
 import { BiBarChartSquare, BiUserCircle } from "react-icons/bi";
 import {
   BsChatText,
