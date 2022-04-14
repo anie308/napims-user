@@ -27,7 +27,9 @@ width: ${({isOpen}) => (!isOpen?  `auto` : `240px` )};
 background: #081A51;
 height:100vh ;
 padding: ${({isOpen}) => !isOpen ?  `0 15px` : `0  0 0 15px`}  ;
-position:relative ;
+position:fixed ;
+left: 0;
+top: 0;
 transition: all ease 0.2s;
 `
 export const Logo = styled(Link)`
@@ -118,4 +120,35 @@ padding:2px 8px ;
 color:white ;
 background:#CF3A59 ;
 margin-right:2px ;
+`
+
+export const Drop = styled.div` 
+width:100% ;
+position: relative;
+user-select:none ;
+
+`
+export const DropButton = styled.div` 
+display:flex ;
+align-items:center ;
+cursor: pointer;
+color: #FFFFFF;
+
+.iconnn{
+    font-size: 24px;
+}
+
+p{
+    color: #FFFFFF;
+    margin-left:10px ;
+}
+
+
+`
+export const DropContent = styled.div` 
+padding-left:20px ;
+position: absolute;
+width:90% ;
+overflow:hidden ;
+
 `

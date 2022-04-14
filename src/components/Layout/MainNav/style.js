@@ -8,6 +8,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px 10px;
+  background:#FFFFFF ;
 `;
 export const UserCon = styled.div`
   padding: 0 20px;
@@ -50,7 +51,7 @@ cursor: pointer;
   /* padding: 0 20px; */
 
   @media screen and (max-width: 900px) {
-    padding: 0;
+    margin:0 ;
   }
 `;
 export const User = styled.div`
@@ -115,6 +116,8 @@ export const SearchCon = styled.div`
 export const SearchIcon = styled.button`
   border: none;
   outline: none;
+  background:transparent ;
+  cursor: pointer;
 
   .icon {
     font-size: 20px;
