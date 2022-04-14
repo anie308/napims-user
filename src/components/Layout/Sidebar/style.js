@@ -4,14 +4,15 @@ import styled from "styled-components";
 export const SideBarButton = styled.div` 
 position: absolute;
 top:30px ;
-right: ${({isOpen}) => isOpen ? `-16px` : `-46px`} ;
+right: ${({isOpen}) => isOpen ? `-18px` : `-17px`} ;
 width:32px ;
 height:32px ;
 border-radius:50% ;
-background:#DADADA;
+background:#FFFFFF;
 display:flex ;
 justify-content:center ;
 align-items:center ;
+z-index:2 ;
 
 transform: ${({isOpen}) => !isOpen ?  `rotate(180deg)` : `initial`} ;
 `
@@ -29,6 +30,7 @@ cursor: pointer;
 align-items:center ;
 height:60px ;
 text-decoration:none ;
+outline:none ;
 .icon{
     background:#017EFA ;
     height:30px ;
