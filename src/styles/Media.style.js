@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   padding: 30px;
 `;
-export const UploadMCon = styled.div``;
-export const UploadText = styled.div``;
+
 export const FileUploadCon = styled.div`
   margin-top: 50px;
   display: flex;

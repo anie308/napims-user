@@ -163,13 +163,13 @@ const generalLinkArr = [
   {
     label: "Content-Text",
     icon: <BsLayoutTextSidebar />,
-    to: "/media",
+    to: "/content",
     notification: 0,
   },
   {
     label: "Content-Media",
     icon: <FaImages />,
-    to: "/content",
+    to: "/media",
     notification: 0,
   },
 ];

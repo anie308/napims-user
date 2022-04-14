@@ -18,7 +18,7 @@ import {
   Contacts,
   NotCount
 } from "./style";
-import Profile from "../../../assets/img/profile.jpg";
+import Profile from "../../assets/img/profile.jpg";
 import { BiChevronDown, BiSearch } from "react-icons/bi";
 import { BsDot } from "react-icons/bs";
 import { IoIosNotificationsOutline } from "react-icons/io";

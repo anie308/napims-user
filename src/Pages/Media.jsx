@@ -1,11 +1,9 @@
 import React from "react";
-import UploadCard from "../components/Upload/UploadCard/UploadCard";
+import UploadCon from '../components/MediaFiles/UploadCon'
 import { AiOutlinePlus, AiTwotoneFolderOpen } from "react-icons/ai";
 import { BsImage, BsImageFill } from "react-icons/bs";
 import {
   Container,
-  UploadMCon,
-  UploadText,
   FileUploadCon,
   Folder,
   UploadArea,
@@ -28,11 +26,8 @@ function Media() {
   };
   return (
     <Container>
-      <UploadMCon>
-        <UploadText> </UploadText>
-        <UploadCard />
-        <UploadCard />
-      </UploadMCon>
+      <UploadCon/>
+     
       <FileUploadCon>
         <Folder>
           <div className="menu-header">
