@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import {useLocation} from 'react-router-dom'
 import {
   Con,
   Container,
@@ -7,61 +8,101 @@ import {
   LinkLabel,
   LinkNotification,
   Logo,
+  SideBarButton,
   SLink,
   Title,
 } from "./style";
-import { AiOutlinePlusCircle } from "react-icons/ai";
+import { AiOutlinePlusCircle, AiOutlineLeft } from "react-icons/ai";
 import { BiBarChartSquare, BiUserCircle, BiSearchAlt } from "react-icons/bi";
 import { BsChatText, BsCalendar2Event } from "react-icons/bs";
 import { MdAnalytics } from "react-icons/md";
 import { RiFolder4Line, RiSettingsLine } from "react-icons/ri";
 
 function SideBar() {
+  const [sideBarOpen, setSideBarOpen] = useState(false);
+  const {pathname} = useLocation();
   return (
-    <Container>
-      <Logo to="/">
+    <Container isOpen={sideBarOpen}>
+     
+      <SideBarButton isOpen={sideBarOpen} onClick={() => setSideBarOpen((p) => !p)}>
+        <AiOutlineLeft/>
+      </SideBarButton>
+      
+      <Logo to="/" style={!sideBarOpen ? {width:`fit-content`} : {}}>
         <p className="icon">
           <AiOutlinePlusCircle className="iconn" />
         </p>
-        <p>chams</p>
+        
+        {sideBarOpen && (
+                 <>
+                 <p>chams</p>
+                 </>
+              )}
       </Logo>
       <Con>
-        <Title>MAINMENU</Title>
+      {sideBarOpen && (
+                 <>
+              <Title>General</Title>
+                 </>
+              )}
         {
           mainLinkArr.map(({icon, label, notification, to })=> (
-            <LinkCon key={label}>
-            <SLink to={to}>
+            <LinkCon key={label} isActive={pathname === to}>
+            <SLink to={to}  style={!sideBarOpen ? {width:`fit-content`} : {}}>
               <LinkIcon>{icon}</LinkIcon>
-              <LinkLabel>{label}</LinkLabel>
-              {!! notification && <LinkNotification>{notification}</LinkNotification>}
+              {sideBarOpen && (
+                 <>
+                 <LinkLabel>{label}</LinkLabel>
+                 {!! notification && <LinkNotification>{notification}</LinkNotification>}
+                 </>
+              )}
+             
+              
             </SLink>
           </LinkCon>
           ))
         }
       </Con>
       <Con>
-        <Title>MAINMENU</Title>
+      {sideBarOpen && (
+                 <>
+              <Title>General</Title>
+                 </>
+              )}
         {
           workLinkArr.map(({icon, label, notification, to })=> (
             <LinkCon key={label}>
-            <SLink to={to}>
+            <SLink to={to} style={!sideBarOpen ? {width:`fit-content`} : {}}>
               <LinkIcon>{icon}</LinkIcon>
-              <LinkLabel>{label}</LinkLabel>
-              {!! notification && <LinkNotification>{notification}</LinkNotification>}
+              {sideBarOpen && (
+                 <>
+                 <LinkLabel>{label}</LinkLabel>
+                 {!! notification && <LinkNotification>{notification}</LinkNotification>}
+                 </>
+              )}
             </SLink>
           </LinkCon>
           ))
         }
       </Con>
       <Con>
-        <Title>MAINMENU</Title>
+      {sideBarOpen && (
+                 <>
+              <Title>General</Title>
+                 </>
+              )}
+        
         {
           generalLinkArr.map(({icon, label, notification, to })=> (
             <LinkCon key={label}>
-            <SLink to={to}>
+            <SLink to={to} style={!sideBarOpen ? {width:`fit-content`} : {}}>
               <LinkIcon>{icon}</LinkIcon>
-              <LinkLabel>{label}</LinkLabel>
-              {!! notification && <LinkNotification>{notification}</LinkNotification>}
+              {sideBarOpen && (
+                 <>
+                 <LinkLabel>{label}</LinkLabel>
+                 {!! notification && <LinkNotification>{notification}</LinkNotification>}
+                 </>
+              )}
             </SLink>
           </LinkCon>
           ))
@@ -76,13 +117,13 @@ const mainLinkArr = [
     label: "Home",
     icon: <BiBarChartSquare />,
     to: "/",
-    notification: 1,
+    notification: 0,
   },
   {
     label: "Inbox",
     icon: <BsChatText />,
     to: "/inbox",
-    notification: 0,
+    notification: 1,
   },
 ];
 const workLinkArr = [
