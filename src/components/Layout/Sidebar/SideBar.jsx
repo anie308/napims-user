@@ -13,7 +13,7 @@ import {
   Title,
 } from "./style";
 import { AiOutlinePlusCircle, AiOutlineLeft } from "react-icons/ai";
-import { BiBarChartSquare, BiUserCircle, BiSearchAlt } from "react-icons/bi";
+import { BiBarChartSquare, BiUserCircle } from "react-icons/bi";
 import { BsChatText, BsCalendar2Event } from "react-icons/bs";
 import { MdAnalytics } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
