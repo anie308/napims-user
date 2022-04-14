@@ -11,7 +11,6 @@ import {
   Folder,
   UploadArea
 } from "../styles/Media.style";
-import { useRef } from "react";
 import { useState } from "react";
 
 function Media() {
