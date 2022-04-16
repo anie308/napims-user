@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Container,
   UserCon,
@@ -25,15 +25,15 @@ import { BsDot } from "react-icons/bs";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import {FaBars} from 'react-icons/fa'
 function Mainnav() {
-  const [sidebar, setSidebar] = useState(false);
-  const showSidebar = () =>console.log('clicked')
+  // const [sidebar, setSidebar] = useState(false);
+  // const showSidebar = () =>console.log('clicked')
 
   // setSidebar(!sidebar)
 
   return (
     <Container>
       <NavOpen >
-      <FaBars className="bars" onClick={showSidebar}/>
+      <FaBars className="bars" />
       </NavOpen>
       <UserCon>
         <User>
