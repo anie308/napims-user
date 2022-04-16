@@ -4,9 +4,19 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
+position:fixed ;
+top:0 ;
+left: 0;
 width:200px;
 background: #081A51;
 height:100vh ;
+padding:10px ;
+
+@media screen and (max-width: 900px){
+    /* left: -100%;     */
+    left:${({ sidebar }) => (sidebar ? '10px' : '-100%')};
+
+}
 `
 export const Logo = styled(Link)`
 display: flex;

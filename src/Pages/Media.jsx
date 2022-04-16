@@ -66,7 +66,7 @@ function Media() {
            
           </div>
         </Folder>
-        <UploadArea onFileChange={(files) => onFileChange(files)}>
+        <UploadArea onChange={(files) => onFileChange(files)}>
           <div className="con">
             <BsImage className="icon" />
             <p className="drag">Drap your image here to add to your folder</p>

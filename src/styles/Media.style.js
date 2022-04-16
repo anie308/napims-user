@@ -2,12 +2,21 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 30px;
+
+  @media screen and (max-width: 900px){
+  padding: 10px;
+}
 `;
 
 export const FileUploadCon = styled.div`
   margin-top: 50px;
   display: flex;
   gap: 20px;
+
+  @media screen and (max-width: 900px){
+    flex-direction:column ;
+  
+}
 `;
 export const Folder = styled.div`
   flex: 1;
@@ -95,6 +104,11 @@ export const Folder = styled.div`
       }
 
   }
+
+  @media screen and (max-width: 900px){
+   min-height:300px ;
+  
+}
 `;
 export const UploadArea = styled.div`
   position: relative;
@@ -154,4 +168,9 @@ export const UploadArea = styled.div`
   &:hover {
     opacity: 0.6;
   }
+
+  @media screen and (max-width: 900px){
+   min-height:300px ;
+  
+}
 `;

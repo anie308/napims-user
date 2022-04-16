@@ -29,7 +29,7 @@ function SideBar() {
   const [isDropped, setIsDropped] = useState(false);
   const { pathname } = useLocation();
   return (
-    <Container >
+    <Container>
       
   
 

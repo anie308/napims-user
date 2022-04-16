@@ -18,8 +18,26 @@ export const UserCon = styled.div`
 
   @media screen and (max-width: 900px) {
     padding: 0;
+    margin: 0 10px ;
+    border:none ;
   }
 `;
+
+export const NavOpen = styled.div`  
+display: none;
+
+@media screen and (max-width: 900px) {
+    display:flex;
+    align-items:center ;
+    justify-content:center ;
+    margin:0 10px;
+
+    .bars{
+      font-size:25px ;
+
+    }
+  }
+`
 
 export const SearchActiveCon = styled.div`
   display: flex;
@@ -31,6 +49,7 @@ export const SearchActiveCon = styled.div`
 
   @media screen and (max-width: 900px) {
     padding: 0;
+    border:none ;
   }
 `;
 export const NotCon = styled.div`
@@ -162,6 +181,10 @@ export const Status = styled.div`
     line-height: 15px;
     color: #30d988;
     text-transform:uppercase ;
+  }
+
+  @media screen and (max-width: 900px) {
+    display:none;
   }
 `;
 export const Contacts = styled.div``;
