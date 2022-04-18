@@ -39,7 +39,7 @@ function SideBar() {
           <AiOutlinePlusCircle className="iconn" />
         </p>
 
-            <p>chams</p>
+            <p>NAPIMS</p>
 
       </Logo>
       <Con>
