@@ -14,7 +14,7 @@ import {
   SLink,
   Title,
 } from "./style";
-import { AiOutlinePlusCircle} from "react-icons/ai";
+import { AiOutlinePlusCircle } from "react-icons/ai";
 import { BiBarChartSquare, BiUserCircle } from "react-icons/bi";
 import {
   BsChatText,
@@ -30,91 +30,55 @@ function SideBar() {
   const { pathname } = useLocation();
   return (
     <Container>
-      
-  
-
-      <Logo to="/" 
-      >
+      <Logo to="/">
         <p className="icon">
           <AiOutlinePlusCircle className="iconn" />
         </p>
 
-            <p>NAPIMS</p>
-
+        <p>NAPIMS</p>
       </Logo>
       <Con>
-
-            <Title>MainMenu</Title>
+        <Title>MainMenu</Title>
 
         {mainLinkArr.map(({ icon, label, notification, to }) => (
           <LinkCon key={label} isActive={pathname === to}>
-            <SLink to={to} 
-
-            >
+            <SLink to={to}>
               <LinkIcon>{icon}</LinkIcon>
-            
-                  <LinkLabel>{label}</LinkLabel>
 
-                  {!!notification && (
-                    <LinkNotification>{notification}</LinkNotification>
-                  )}
-              
+              <LinkLabel>{label}</LinkLabel>
+
+              {!!notification && (
+                <LinkNotification>{notification}</LinkNotification>
+              )}
             </SLink>
           </LinkCon>
         ))}
-      </Con>
-      <Con>
-      
-      
-            <Title>Workspace</Title>
-          
-        {workLinkArr.map(({ icon, label, notification, to }) => (
-          <LinkCon key={label}>
-            <SLink to={to}
-             >
-              <LinkIcon>{icon}</LinkIcon>
-          
-                  <LinkLabel>{label}</LinkLabel>
-                  {!!notification && (
-                    <LinkNotification>{notification}</LinkNotification>
-                  )}
-           
-            </SLink>
-          </LinkCon>
-        ))}
-      </Con>
-      <Con>
-    
-            <Title>General</Title>
-     
+        <Con>
+          <Drop>
+            <DropButton onClick={(e) => setIsDropped(!isDropped)}>
+              <RiFolder4Line className="iconnn" />
+              <p>Files and Folders</p>
+            </DropButton>
+            {isDropped && (
+              <DropContent>
+                {generalLinkArr.map(({ icon, label, notification, to }) => (
+                  <LinkCon key={label}>
+                    <SLink to={to}>
+                      <LinkIcon>{icon}</LinkIcon>
 
-        <Drop>
-          <DropButton  
-             onClick={e =>setIsDropped(!isDropped) }><RiFolder4Line className="iconnn"/> 
-                  <p>Files and Folders</p>
-
-          </DropButton>
-         {isDropped && (
-            <DropContent>
-            {generalLinkArr.map(({ icon, label, notification, to }) => (
-              <LinkCon key={label}>
-                <SLink
-                  to={to}
-                >
-                  <LinkIcon>{icon}</LinkIcon>
-                  
                       <LinkLabel>{label}</LinkLabel>
                       {!!notification && (
                         <LinkNotification>{notification}</LinkNotification>
                       )}
-            
-                </SLink>
-              </LinkCon>
-            ))}
-          </DropContent>
-         )}
-        </Drop>
+                    </SLink>
+                  </LinkCon>
+                ))}
+              </DropContent>
+            )}
+          </Drop>
+        </Con>
       </Con>
+
     </Container>
   );
 }
@@ -127,38 +91,19 @@ const mainLinkArr = [
     notification: 0,
   },
   {
-    label: "Inbox",
-    icon: <BsChatText />,
-    to: "/inbox",
-    notification: 1,
-  },
-];
-const workLinkArr = [
-  {
-    label: "Profile",
-    icon: <BiUserCircle />,
-    to: "/account",
-    notification: 0,
-  },
-  {
     label: "Pending Authorization",
     icon: <BsCalendar2Event />,
     to: "/pending",
     notification: 0,
   },
   {
-    label: "Users",
-    icon: <FaUsers />,
-    to: "/users",
-    notification: 0,
-  },
-  {
-    label: "Work Log ",
-    icon: <MdAnalytics />,
-    to: "/log",
+    label: "Profile",
+    icon: <BiUserCircle />,
+    to: "/account",
     notification: 0,
   },
 ];
+
 const generalLinkArr = [
   {
     label: "Content-Text",
